@@ -47,8 +47,8 @@ const RichTextEditor = ({ content, onChange }: RichTextEditorProps) => {
   if (!editor) return null;
 
   return (
-    <div className="border rounded-lg">
-      <div className="flex items-center gap-1 p-1 border-b bg-gray-50">
+    <div className="border rounded-lg overflow-hidden">
+      <div className="flex items-center gap-1 p-2 border-b bg-gray-50">
         <MenuButton
           isActive={editor.isActive('bold')}
           onClick={() => editor.chain().focus().toggleBold().run()}
@@ -89,7 +89,7 @@ const RichTextEditor = ({ content, onChange }: RichTextEditorProps) => {
       
       <EditorContent 
         editor={editor} 
-        className="prose prose-sm max-w-none p-3 focus:outline-none [&>*]:outline-none [&_p]:my-0 [&_p+p]:mt-1"
+        className="prose prose-sm max-w-none p-4 outline-none focus:outline-none focus-visible:outline-none focus:ring-0 ring-0 min-h-[150px]"
       />
     </div>
   );
