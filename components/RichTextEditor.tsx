@@ -87,10 +87,12 @@ const RichTextEditor = ({ content, onChange }: RichTextEditorProps) => {
         </MenuButton>
       </div>
       
-      <EditorContent 
-        editor={editor} 
-        className="prose prose-sm max-w-none p-4 outline-none focus:outline-none focus-visible:outline-none focus:ring-0 ring-0 min-h-[150px]"
-      />
+      <div className="prose prose-sm max-w-none relative">
+        <EditorContent 
+          editor={editor} 
+          className="w-full p-3 outline-none focus:outline-none focus-visible:outline-none focus:ring-0 ring-0 [&_.ProseMirror]:min-h-[100px]"
+        />
+      </div>
     </div>
   );
 };

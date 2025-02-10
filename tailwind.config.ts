@@ -16,11 +16,11 @@ const config = {
         DEFAULT: {
           css: {
             maxWidth: 'none',
-            lineHeight: '1.3',
+            lineHeight: '1',
             p: {
-              marginTop: '0.125rem',
+              marginTop: '0rem',
               marginBottom: '0.125rem',
-              lineHeight: '1.3',
+              lineHeight: '1',
             },
             ul: {
               marginTop: '0rem',
